@@ -87,3 +87,5 @@ class Text extends Component {
 }
 
 export default Text;
+
+//Created by Beau Johnsrud

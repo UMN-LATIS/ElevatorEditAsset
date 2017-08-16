@@ -109,12 +109,4 @@ class General extends Component{
 
 export default General;
 
-/*
-
-var Cars;
-
-var values = Object.values(Cars); //list of value object.
-
-var colors = Array(values.length).map((x,i) => values[i][color]);
-
-*/
+//Created by Beau Johnsrud

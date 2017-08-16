@@ -193,3 +193,5 @@ class Location extends Component {
 }
 
 export default Location;
+
+//Created by Beau Johnsrud

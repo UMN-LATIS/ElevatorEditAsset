@@ -120,3 +120,5 @@ class RelatedAsset extends Component {
 }
 
 export default RelatedAsset;
+
+//Created by Beau Johnsrud

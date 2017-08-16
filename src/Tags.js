@@ -70,3 +70,5 @@ class Tags extends React.Component {
 }
 
 export default Tags;
+
+//Created by Beau Johnsrud

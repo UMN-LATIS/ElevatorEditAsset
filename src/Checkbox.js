@@ -84,3 +84,5 @@ class CheckboxWidget extends Component {
 }
 
 export default CheckboxWidget;
+
+//Created by Beau Johnsrud

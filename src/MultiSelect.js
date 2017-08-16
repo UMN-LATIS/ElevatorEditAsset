@@ -151,3 +151,5 @@ class MultiSelect extends Component {
 }
 
 export default MultiSelect;
+
+//Created by Beau Johnsrud
