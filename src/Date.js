@@ -57,7 +57,7 @@ class DateWidget extends Component {
     }
     return "error";
 
-  }
+  }//checks if a parsed date exists and then returns the className that corresponds
 
   parseDateString(dateString, dict) {
     if(moment(dateString).isValid())
@@ -77,7 +77,7 @@ class DateWidget extends Component {
     }
     else {
       return "";
-  }
+  }//parses dates
 
   }
   render() {

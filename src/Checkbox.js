@@ -27,7 +27,7 @@ class CheckboxWidget extends Component {
     this.props.getState(this.props.data.fieldTitle, dict);
     this.setState ({
       dict: dict,
-    });
+    });//this.setState always passed information back to ElevatorElementList
   }
 
   componentDidMount() {
