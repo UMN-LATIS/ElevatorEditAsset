@@ -111,7 +111,7 @@ class DateWidget extends Component {
       });
     }
 
-    var handleSubmit = function(i, property, event) {
+    var handleBlur = function(i, property, event) {
       var dict = this.state.dict;
       switch(property) {
         case "start" :
@@ -154,19 +154,19 @@ class DateWidget extends Component {
 
                       <FormGroup validationState={this.getValidationState(this.state.dict[i].start)}>
                         {(this.state.dateType[i]) === "moment" ? <ControlLabel>Date</ControlLabel> : <ControlLabel>Start</ControlLabel>}
-                        <FormControl type="text" className='formcontrol' defaultValue={this.state.dict[i].start.text} onBlur={handleSubmit.bind(this, i, "start")} />
+                        <FormControl type="text" className='formcontrol' defaultValue={this.state.dict[i].start.text} onBlur={handleBlur.bind(this, i, "start")} />
                         {(this.getValidationState(this.state.dict[i].start) === 'error') && <HelpBlock>We could not figure out a way to parse this date.</HelpBlock>}
                       </FormGroup><br/>
 
                       {(this.state.dateType[i] === "range") && (<FormGroup validationState={this.getValidationState(this.state.dict[i].end)}>
                         <ControlLabel>End</ControlLabel>
-                        <FormControl type="text" className='formcontrol' defaultValue={this.state.dict[i].end.text} onBlur={handleSubmit.bind(this, i, "end")} placeholder="End" /><br/>
+                        <FormControl type="text" className='formcontrol' defaultValue={this.state.dict[i].end.text} onBlur={handleBlur.bind(this, i, "end")} placeholder="End" /><br/>
                         {(this.getValidationState(this.state.dict[i].end) === 'error') && <HelpBlock>We could not figure out a way to parse this date.</HelpBlock>}
                       <br/></FormGroup>)}
 
                       <FormGroup>
                         <p>Label</p>
-                        <FormControl type="text" className='formcontrol' defaultValue={this.state.dict[i].label} onBlur={handleSubmit.bind(this, i, "label")} placeholder="Label" />
+                        <FormControl type="text" className='formcontrol' defaultValue={this.state.dict[i].label} onBlur={handleBlur.bind(this, i, "label")} placeholder="Label" />
                       </FormGroup><br/>
                     </Form>
                   </div>

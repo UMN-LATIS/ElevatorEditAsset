@@ -100,7 +100,7 @@ class Location extends Component {
         dict: dict,
       });
       this.props.getState(this.props.fieldTitle, dict);
-    }
+    }//this function is passed to InitialMap as a hacky way to change the state of elevatorelementlist
 
     var searchHandleClick = function(i) {
       var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + encodeURI(this.state.dict[i].address) + "&key=AIzaSyALp7FztjTiGMkWkj7TTcxnKKQSooHsxO0";

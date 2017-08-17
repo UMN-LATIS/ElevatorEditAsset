@@ -38,7 +38,7 @@ class MultiSelect extends Component {
     var object = data;
     for(var j=0; j<k; j++)
     {
-      if(fieldContents[j] === "Choose")
+      if(!fieldContents[j])
       {
         return null;
       }
@@ -55,7 +55,7 @@ class MultiSelect extends Component {
     var object = data;
     for(var j=0; j<k; j++)
     {
-      if(fieldContents[j] === "Choose")
+      if(!fieldContents[j])
       {
         return null;
       }
@@ -85,6 +85,7 @@ class MultiSelect extends Component {
     }
 
     var selectHandleChange = function(i, j, category, event) {
+      console.log(category);
       var dict = this.state.dict;
       var values = Object.values(dict[i].fieldContents);
       var categories = Object.keys(dict[i].fieldContents);
@@ -97,16 +98,18 @@ class MultiSelect extends Component {
         values = values.slice(0, j)
       }
       var converter= {};
-      for(var k = 0; k<values.length; k++)
+      for(var k = 0; k<values.length-1; k++)
       {
         converter[categories[k]] = values[k];
       }
+      converter[category] = values[k];
       dict[i].fieldContents=converter;
+
       this.setState ({
         dict: dict,
       });
       this.props.getState(this.props.data.fieldTitle, dict);
-    }
+    }//function with confusing logic that controls the dropdown selects and the state
 
     var data=this.props.data.fieldData;
     var header = (<div>{this.props.data.label}{(this.props.data.tooltip !== "") ? " : " + this.props.data.tooltip : ""}<div className="plusButton">{(this.props.data.allowMultiple) && <Button style={{position: "relative", top: "-25px"}} onClick={this.handleClick}>+</Button>}</div></div>);
