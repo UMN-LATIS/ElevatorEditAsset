@@ -1,8 +1,6 @@
-/*Use TinyMCE*/
-
 import React, { Component } from "react";
 import { Button, Panel, Radio, FormGroup, Col } from "react-bootstrap";
-import TinyMCE from "react-tinymce";
+import TinyMCE from "react-tinymce";//documentation here https://www.npmjs.com/package/react-tinymce
 import "./App.css";
 
 class TextArea extends Component {

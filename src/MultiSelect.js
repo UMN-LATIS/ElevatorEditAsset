@@ -85,7 +85,6 @@ class MultiSelect extends Component {
     }
 
     var selectHandleChange = function(i, j, category, event) {
-      console.log(category);
       var dict = this.state.dict;
       var values = Object.values(dict[i].fieldContents);
       var categories = Object.keys(dict[i].fieldContents);
