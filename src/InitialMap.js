@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
-import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { withGoogleMap, GoogleMap, Marker } from "react-google-maps";//doumentation here https://github.com/tomchentw/react-google-maps
 
 class Map extends Component {
   render() {
