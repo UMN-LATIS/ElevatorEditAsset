@@ -25,14 +25,14 @@ class RelatedAsset extends Component {
     this.setState ({
       dict: dict,
     });
-  }
+  }//handleClick for the plus buttons
 
   componentDidMount() {
     this.props.getState(this.props.data.fieldTitle, this.state.dict);
   }
 
   addAsset() {
-    var windowPointer = window.open("http://10.158.167.153:3000/");
+    var windowPointer = window.open("http://10.158.167.153:3000/");//where I host this locally, will need to be changed
   	windowPointer.onload = function( ){
       console.log(windowPointer);
   	}
@@ -40,6 +40,7 @@ class RelatedAsset extends Component {
 
   render() {
     var data = {"templateId":"54","templateName":"Related Asset Target","widgetArray":[{"widgetId":2113,"type":"text","allowMultiple":true,"attemptAutocomplete":false,"fieldTitle":"titlefield_1","label":"Title Field","tooltip":"","fieldData":[]},{"widgetId":2114,"type":"upload","allowMultiple":false,"attemptAutocomplete":false,"fieldTitle":"fileattachment_1","label":"File Attachment","tooltip":"","fieldData":{"extractDate":true,"extractLocation":true}}],"collections":{"25":{"Blank Generation":{"28":"fades"}},"20":{"Collection two":{"23":"Test Collection"}},"29":"Date testing","1":"Initial Collection","26":"Lang Center New","24":"Language Center","40":"new test collection","35":"Obama Speeches","27":"really blank","41":"Speeches 2"},"allowedCollections":{"25":"Blank Generation","20":"Collection two","29":"Date testing","28":"fades","1":"Initial Collection","26":"Lang Center New","24":"Language Center","40":"new test collection","35":"Obama Speeches","27":"really blank","41":"Speeches 2","23":"Test Collection"}}
+    //example data
 
     var handleChange = function(i) {
       var dict = this.state.dict;
@@ -55,7 +56,7 @@ class RelatedAsset extends Component {
         dict: dict,
       });
       this.props.getState(this.props.data.fieldTitle, dict);
-    }
+    }//updates when isPrimary needs to be changed
 
     var selectHandleChange = function(i, event) {
       var dict = this.state.dict;

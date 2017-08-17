@@ -22,7 +22,7 @@ class Upload extends Component {
     this.setState ({
       dict: dict,
     });
-  }
+  }//handleClick for the plus buttons
 
   handleSubmit(event) {
     event.preventDefault();
@@ -67,7 +67,7 @@ class Upload extends Component {
         dict: dict,
       });
       this.props.getState(this.props.data.fieldTitle, dict);
-    }
+    }//updates when isPrimary needs to be changed
 
     var header = (<div>{this.props.data.label}{(this.props.data.tooltip !== "") ? " : " + this.props.data.tooltip : ""}<div className="plusButton">{(this.props.data.allowMultiple) && <Button style={{position: "relative", top: "-25px"}} onClick={this.handleClick}>+</Button>}</div></div>);
     var footer = (<div className="plusButton">{(this.props.data.allowMultiple) && <Button onClick={this.handleClick}>+</Button>}</div>);

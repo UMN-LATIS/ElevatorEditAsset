@@ -27,7 +27,7 @@ class MultiSelect extends Component {
     this.setState ({
       dict: dict,
     });
-  }
+  }//handleClick for the plus buttons
 
   componentDidMount() {
     this.props.getState(this.props.data.fieldTitle, this.state.dict);
@@ -82,7 +82,7 @@ class MultiSelect extends Component {
         dict: dict,
       });
       this.props.getState(this.props.data.fieldTitle, dict);
-    }
+    }//updates when isPrimary needs to be changed
 
     var selectHandleChange = function(i, j, category, event) {
       var dict = this.state.dict;

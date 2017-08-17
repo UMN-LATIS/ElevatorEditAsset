@@ -39,7 +39,7 @@ class DateWidget extends Component {
       dateType: dateType,
       dict: dict,
     });
-  }
+  }//handleClick for the plus buttons
 
   componentDidMount() {
     this.props.getState(this.props.data.fieldTitle, this.state.dict);
@@ -95,7 +95,7 @@ class DateWidget extends Component {
         dict: dict,
       });
       this.props.getState(this.props.data.fieldTitle, dict);
-    }
+    }//updates when isPrimary needs to be changed
 
     var dropdownHandleChange = function(i) {
       var dateType = this.state.dateType;

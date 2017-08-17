@@ -29,21 +29,21 @@ class Text extends Component {
     this.setState ({
       dict: dict,
     });
-  }
+  }//handleClick for the plus buttons
 
   componentDidMount() {
     this.props.getState(this.props.data.fieldTitle, this.state.dict);
   }
 
   render() {
-    var handleSubmit = function(i, event) {
+    var handleBlur = function(i, event) {
       var dict= this.state.dict;
       dict[i].fieldContents=event.target.value;
       this.setState ({
         dict: dict,
       })
       this.props.getState(this.props.data.fieldTitle, dict);
-    }
+    }//updates state when text field blurs
 
     var handleChange = function(i) {
       var dict = this.state.dict;
@@ -59,7 +59,7 @@ class Text extends Component {
         dict: dict,
       });
       this.props.getState(this.props.data.fieldTitle, dict);
-    }
+    }//updates when isPrimary needs to be changed
 
     var header = (<div>{this.props.data.label}{(this.props.data.tooltip !== "") ? " : " + this.props.data.tooltip : ""}<div className="plusButton">{(this.props.data.allowMultiple) && <Button style={{position: "relative", top: "-25px"}} onClick={this.handleClick}>+</Button>}</div></div>);
     var footer = (<div className="plusButton">{(this.props.data.allowMultiple) && <Button onClick={this.handleClick}>+</Button>}</div>);
@@ -70,7 +70,7 @@ class Text extends Component {
                   <Form inline onSubmit={(event) => event.preventDefault() }>
                     <FormGroup>
                       <ControlLabel>{this.props.data.label}</ControlLabel>
-                      <FormControl className='formcontrol' type="text" defaultValue={this.state.dict[i].fieldContents}  onBlur={handleSubmit.bind(this,i)} placeholder={this.props.data.label} />
+                      <FormControl className='formcontrol' type="text" defaultValue={this.state.dict[i].fieldContents}  onBlur={handleBlur.bind(this,i)} placeholder={this.props.data.label} />
                     </FormGroup>
                   </Form>
 

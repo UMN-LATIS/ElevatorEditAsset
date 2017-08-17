@@ -50,7 +50,7 @@ class Location extends Component {
       dict: dict,
       show: show,
     });
-  }
+  }//handleClick for the plus buttons
 
   componentDidMount() {
     this.props.getState(this.props.fieldTitle, this.state.dict);
@@ -76,7 +76,7 @@ class Location extends Component {
         dict: dict,
       });
       this.props.getState(this.props.fieldTitle, dict);
-    }
+    }//updates when isPrimary needs to be changed
 
     var handleSubmit = function(i, property, event) {
       var dict = this.state.dict;
