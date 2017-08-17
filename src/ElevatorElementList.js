@@ -89,7 +89,7 @@ class ElevatorElementList extends Component {
         case "location" :
           return <Location getState={getState} data={data} fillIn={fillIn}/>;
         case "multiselect" :
-          return <MultiSelect getState={getState} data={data} />;
+          return <MultiSelect getState={getState} data={data} fillIn={fillIn}/>;
         case "related asset" :
           return <RelatedAsset getState={getState} data={data} fillIn={fillIn} options={["option1", "option2"]}/>;
         case "select" :

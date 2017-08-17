@@ -13,7 +13,7 @@ class TextArea extends Component {
     }
     else {
       this.state = {
-        dict: [{ "fieldContents": "<p>This is the initial contents of the editor",
+        dict: [{ "fieldContents": "<p>This is the initial contents of the editor</p>",
                  "isPrimary": false,
                }],
       }
