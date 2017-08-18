@@ -149,12 +149,12 @@ class Location extends Component {
                     <Col xsOffset={1} xs={11}><Form inline>
                       <FormGroup>
                         <ControlLabel>Latitude</ControlLabel>
-                        <FormControl className='formcontrol' onChange={handleSubmit.bind(this, i, "latitude")} type="text" value={this.state.dict[i].loc.coordinates[0]} />
+                        <FormControl className='formcontrol' onChange={handleSubmit.bind(this, i, "latitude")} type="text" placeholder={this.state.dict[i].loc.coordinates[1]} />
                       </FormGroup><br/>
 
                       <FormGroup>
                         <ControlLabel>Longitude</ControlLabel>
-                        <FormControl className='formcontrol' onChange={handleSubmit.bind(this, i, "longitude")} type="text" value={this.state.dict[i].loc.coordinates[1]} />
+                        <FormControl className='formcontrol' onChange={handleSubmit.bind(this, i, "longitude")} type="text" placeholder={this.state.dict[i].loc.coordinates[0]} />
                       </FormGroup><br/>
 
                       <FormGroup>

@@ -15,7 +15,7 @@ class Upload extends Component {
       }],
     }
     this.handleClick = this.handleClick.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   handleClick() {
@@ -26,7 +26,7 @@ class Upload extends Component {
     });
   }//handleClick for the plus buttons
 
-  handleSubmit(event) {
+  handleBlur(event) {
     event.preventDefault();
     var upload = [...Array(this.state.upload.length)].map((x,i) => this.refs[i].value);
     this.props.getState(this.props.fieldTitle, upload);
@@ -40,7 +40,7 @@ class Upload extends Component {
   }
 
   render() {
-    var handleSubmit = function(i, name, event) {
+    var handleBlur = function(i, name, event) {
       var dict= this.state.dict;
       if(name === 'file')
       {
@@ -81,12 +81,12 @@ class Upload extends Component {
                   <Form inline>
                     <FormGroup>
                       <ControlLabel>Upload a File: </ControlLabel>
-                      <FormControl className='formcontrol' type="text" ref={i} placeholder="Upload" onBlur={handleSubmit.bind(this, i, "file")}/>
+                      <FormControl className='formcontrol' type="text" ref={i} placeholder="Upload" onBlur={handleBlur.bind(this, i, "file")}/>
                     </FormGroup><br/>
 
                     <FormGroup>
                       <ControlLabel>Description </ControlLabel>
-                      <FormControl className='formcontrol' type="text" ref={i} placeholder={this.props.data.label} onBlur={handleSubmit.bind(this, i, "description")}/>
+                      <FormControl className='formcontrol' type="text" ref={i} placeholder={this.props.data.label} onBlur={handleBlur.bind(this, i, "description")}/>
                     </FormGroup>
                   </Form>
 
