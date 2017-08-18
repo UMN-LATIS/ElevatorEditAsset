@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Panel, FormGroup, Radio, Col } from "react-bootstrap";
-import Tags from "./Tags";
+import Tags from "./Tags";//might want to find a way to reimplement this so that the textbox for this widget look like the rest of the bootsrap textboxes that are used
 import "./App.css";
 
 class TagList extends Component {

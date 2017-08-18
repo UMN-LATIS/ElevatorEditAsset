@@ -1,3 +1,5 @@
+//This widget is unfinished.
+
 import React, { Component } from "react";
 import { Button, Panel, Form, FormGroup, FormControl, ControlLabel, Radio, Col } from "react-bootstrap";
 import "./App.css";
