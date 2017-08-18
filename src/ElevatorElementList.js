@@ -136,7 +136,7 @@ class ElevatorElementList extends Component {
 
                     <Col lg={2} md={1} sm={1} xs={1}><div className='scrollingItems'></div></Col>{/*space in between the sidebar and the widget list*/}
 
-                    <Col lg={8} md={9} sm={9} xs={10} className='scrollingItems'>
+                    <Col lg={8} md={9} sm={9} xs={9} className='scrollingItems'>
                       <section id='General'><General getState={getState.bind(this)} collectionId={this.props.fillIn.collectionId} templateId={this.props.fillIn.templateId} readyForDisplay={this.props.fillIn.readyForDisplay} availableAfter={this.props.fillIn.availableAfter ? this.props.fillIn.availableAfter : ""} allowedCollections={this.props.data.allowedCollections} collections={this.props.data.collections} templates={this.props.data.templates ? this.props.data.templates : []}/></section>
                       {[...Array(entries)].map((x, i) => (
                       <section id={this.props.data.widgetArray[i].label} key={i}>
